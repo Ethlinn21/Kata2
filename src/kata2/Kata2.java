@@ -22,7 +22,7 @@ public class Kata2 {
             }
             else {
                 histogram.put(data[i],1);
-            }
+            } 
         }
         
         for(int key : histogram.keySet()){
