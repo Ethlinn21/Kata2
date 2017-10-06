@@ -9,11 +9,12 @@ public class Kata2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int [] data = {1, 1, 1, 1, 0, 0, 2, 3, 3, 3};
-        Histogram histogram = new Histogram(data);
+        Integer [] data = {1, 1, 1, 1, 0, 0, 2, 3, 3, 3};
+        Histogram histo = new Histogram(data);
+        Map<Integer, Integer> histogr = histo.getHistogram();
         
-        for(int key : histogram.getHistogram().keySet()){
-            System.out.println(key + " --> " + histogram.getHistogram().get(key));
+        for(int key : histogr.keySet()){
+            System.out.println(key + " --> " + histogr.get(key));
             //System.out.println(Arrays.asList(histogram));
         }
     }
