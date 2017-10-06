@@ -10,13 +10,10 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         int [] data = {1, 1, 1, 1, 0, 0, 2, 3, 3, 3};
-        Map <Integer, Integer> histogram = new HashMap<>();
+        Histogram histogram = new Histogram(data);
         
-        for(int key : data){
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key)+1 : 1);  
-        }
-        for(int key : histogram.keySet()){
-            System.out.println(key + " --> " + histogram.get(key));
+        for(int key : histogram.getHistogram().keySet()){
+            System.out.println(key + " --> " + histogram.getHistogram().get(key));
             //System.out.println(Arrays.asList(histogram));
         }
     }
